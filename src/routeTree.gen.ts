@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasesRouteImport } from './routes/cases'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ConteudoRouteImport } from './routes/conteudo'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as ServicosIndexRouteImport } from './routes/servicos.index'
+import { Route as ServicosAreaRouteImport } from './routes/servicos.$area'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasesRoute = CasesRouteImport.update({
+  id: '/cases',
+  path: '/cases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConteudoRoute = ConteudoRouteImport.update({
+  id: '/conteudo',
+  path: '/conteudo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosIndexRoute = ServicosIndexRouteImport.update({
+  id: '/servicos/',
+  path: '/servicos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosAreaRoute = ServicosAreaRouteImport.update({
+  id: '/servicos/$area',
+  path: '/servicos/$area',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cases': typeof CasesRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/servicos/$area': typeof ServicosAreaRoute
+  '/servicos/': typeof ServicosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cases': typeof CasesRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/servicos/$area': typeof ServicosAreaRoute
+  '/servicos': typeof ServicosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cases': typeof CasesRoute
+  '/contato': typeof ContatoRoute
+  '/conteudo': typeof ConteudoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/servicos/$area': typeof ServicosAreaRoute
+  '/servicos/': typeof ServicosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/conteudo'
+    | '/quem-somos'
+    | '/servicos/$area'
+    | '/servicos/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/conteudo'
+    | '/quem-somos'
+    | '/servicos/$area'
+    | '/servicos'
+  id:
+    | '__root__'
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/conteudo'
+    | '/quem-somos'
+    | '/servicos/$area'
+    | '/servicos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CasesRoute: typeof CasesRoute
+  ContatoRoute: typeof ContatoRoute
+  ConteudoRoute: typeof ConteudoRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  ServicosAreaRoute: typeof ServicosAreaRoute
+  ServicosIndexRoute: typeof ServicosIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cases': {
+      id: '/cases'
+      path: '/cases'
+      fullPath: '/cases'
+      preLoaderRoute: typeof CasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conteudo': {
+      id: '/conteudo'
+      path: '/conteudo'
+      fullPath: '/conteudo'
+      preLoaderRoute: typeof ConteudoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos/': {
+      id: '/servicos/'
+      path: '/servicos'
+      fullPath: '/servicos/'
+      preLoaderRoute: typeof ServicosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos/$area': {
+      id: '/servicos/$area'
+      path: '/servicos/$area'
+      fullPath: '/servicos/$area'
+      preLoaderRoute: typeof ServicosAreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CasesRoute: CasesRoute,
+  ContatoRoute: ContatoRoute,
+  ConteudoRoute: ConteudoRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  ServicosAreaRoute: ServicosAreaRoute,
+  ServicosIndexRoute: ServicosIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

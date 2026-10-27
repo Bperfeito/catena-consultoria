@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- All Catena site copy, contact data and asset pointers live in `src/content/catena.ts`; pages read from it so content edits happen in one place.
