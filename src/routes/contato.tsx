@@ -36,7 +36,7 @@ function Contact() {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const parsed = schema.safeParse(data);
-    if (!parsed.success) return setError(parsed.error.issues[0].message);
+    if (!parsed.success) return setError(parsed.error.issues[0]?.message ?? "Verifique os campos");
     setError(null);
     const d = parsed.data;
     const body = `Nome: ${d.nome} ${d.sobrenome}\nE-mail: ${d.email}\nTelefone: ${d.telefone}\n\n${d.mensagem}`;
