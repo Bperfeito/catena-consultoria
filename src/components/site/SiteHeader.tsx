@@ -29,7 +29,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
         <Link to="/" className="flex items-center gap-3 text-ink-foreground" onClick={() => setOpen(false)}>
-          <img src={images.logo} alt="Catena Consultoria" className="h-9 w-auto" />
+          <img src={images.logo} alt="Catena Consultoria" className="h-12 w-auto" />
         </Link>
         <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((n) => (
