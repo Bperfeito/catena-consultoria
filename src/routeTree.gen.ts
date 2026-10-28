@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CasesRouteImport } from './routes/cases'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ConteudoRouteImport } from './routes/conteudo'
+import { Route as MovimentoEmpresaJuniorRouteImport } from './routes/movimento-empresa-junior'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as ServicosIndexRouteImport } from './routes/servicos.index'
 import { Route as ServicosAreaRouteImport } from './routes/servicos.$area'
@@ -37,6 +38,11 @@ const ConteudoRoute = ConteudoRouteImport.update({
   path: '/conteudo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MovimentoEmpresaJuniorRoute = MovimentoEmpresaJuniorRouteImport.update({
+  id: '/movimento-empresa-junior',
+  path: '/movimento-empresa-junior',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QuemSomosRoute = QuemSomosRouteImport.update({
   id: '/quem-somos',
   path: '/quem-somos',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/cases': typeof CasesRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
+  '/movimento-empresa-junior': typeof MovimentoEmpresaJuniorRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos/$area': typeof ServicosAreaRoute
   '/servicos/': typeof ServicosIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/cases': typeof CasesRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
+  '/movimento-empresa-junior': typeof MovimentoEmpresaJuniorRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos/$area': typeof ServicosAreaRoute
   '/servicos': typeof ServicosIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/cases': typeof CasesRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
+  '/movimento-empresa-junior': typeof MovimentoEmpresaJuniorRoute
   '/quem-somos': typeof QuemSomosRoute
   '/servicos/$area': typeof ServicosAreaRoute
   '/servicos/': typeof ServicosIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/contato'
     | '/conteudo'
+    | '/movimento-empresa-junior'
     | '/quem-somos'
     | '/servicos/$area'
     | '/servicos/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/contato'
     | '/conteudo'
+    | '/movimento-empresa-junior'
     | '/quem-somos'
     | '/servicos/$area'
     | '/servicos'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/contato'
     | '/conteudo'
+    | '/movimento-empresa-junior'
     | '/quem-somos'
     | '/servicos/$area'
     | '/servicos/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   CasesRoute: typeof CasesRoute
   ContatoRoute: typeof ContatoRoute
   ConteudoRoute: typeof ConteudoRoute
+  MovimentoEmpresaJuniorRoute: typeof MovimentoEmpresaJuniorRoute
   QuemSomosRoute: typeof QuemSomosRoute
   ServicosAreaRoute: typeof ServicosAreaRoute
   ServicosIndexRoute: typeof ServicosIndexRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConteudoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/movimento-empresa-junior': {
+      id: '/movimento-empresa-junior'
+      path: '/movimento-empresa-junior'
+      fullPath: '/movimento-empresa-junior'
+      preLoaderRoute: typeof MovimentoEmpresaJuniorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/quem-somos': {
       id: '/quem-somos'
       path: '/quem-somos'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   CasesRoute: CasesRoute,
   ContatoRoute: ContatoRoute,
   ConteudoRoute: ConteudoRoute,
+  MovimentoEmpresaJuniorRoute: MovimentoEmpresaJuniorRoute,
   QuemSomosRoute: QuemSomosRoute,
   ServicosAreaRoute: ServicosAreaRoute,
   ServicosIndexRoute: ServicosIndexRoute,
