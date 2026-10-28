@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { cases } from "@/content/catena";
 import { CtaBand, PageHero } from "@/components/site/Blocks";
 
@@ -32,19 +32,36 @@ function Cases() {
                 <p className="eyebrow text-muted-foreground">{c.area}</p>
                 <h2 className="mt-3 text-4xl leading-tight">{c.title}</h2>
                 <p className="mt-3 text-lg text-muted-foreground">{c.client}</p>
+                <details className="group mt-6 border-t border-border pt-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-primary marker:hidden [&::-webkit-details-marker]:hidden">
+                    <span>O que foi feito neste projeto</span>
+                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
+                  </summary>
+                  <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                    {c.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  </div>
+                  {c.gallery && (
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                      {c.gallery.map((image) => (
+                        <figure key={image.label} className="overflow-hidden rounded-lg border border-border bg-card">
+                          <img src={image.src} alt={image.alt} className="h-auto max-h-[28rem] w-full object-contain" loading="lazy" />
+                          <figcaption className="px-4 py-3 text-xs font-medium text-muted-foreground">{image.label}</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
+                </details>
                 <Link to="/contato" search={{ servico: c.title }} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                   Quero um projeto como este <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
-              <div className="overflow-hidden rounded-lg bg-card ring-1 ring-border">
-                <img src={c.image} alt={c.client} className={`aspect-[16/10] w-full ${c.imageFit === "cover" ? "object-cover" : "object-contain p-12"}`} />
+              <div className="grid aspect-[16/10] place-items-center overflow-hidden rounded-lg bg-card ring-1 ring-border">
+                <img src={c.image} alt={c.client} className={c.imageFit === "cover" ? "h-full w-full object-cover" : "h-auto w-auto max-h-[70%] max-w-[84%] object-contain"} />
               </div>
             </article>
           ))}
         </div>
-        <p className="mt-10 max-w-2xl text-sm text-muted-foreground">
-          Os detalhes completos de cada projeto (contexto, solução e resultados) não estavam acessíveis no site original e estão pendentes de confirmação pela equipe Catena.
-        </p>
+
       </section>
       <CtaBand />
     </>

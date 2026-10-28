@@ -59,7 +59,7 @@ function Home() {
           </Link>
         </div>
         <div className="relative lg:col-span-7">
-          <img src={images.equipe} alt="Equipe da Catena Consultoria" className="aspect-[4/3] w-full rounded-lg object-cover" />
+          <img src={images.equipe} alt="Equipe da Catena Consultoria" className="aspect-[4/3] w-full rounded-lg bg-muted object-contain" />
           <div className="absolute -bottom-8 left-6 right-6 grid grid-cols-3 divide-x divide-border rounded-lg bg-card p-6 shadow-xl md:left-auto md:right-8 md:w-[26rem]">
             {[["2014", "Fundação"], ["3", "Engenharias"], ["UFRJ", "Campus Macaé"]].map(([n, l]) => (
               <div key={l} className="px-4 first:pl-0">
@@ -123,8 +123,8 @@ function Home() {
                 hash={c.slug}
                 className={`group flex flex-col overflow-hidden rounded-lg border border-ink-line ${i < 2 ? "md:col-span-3" : "md:col-span-2"}`}
               >
-                <div className={`relative overflow-hidden bg-ink-foreground ${i < 2 ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
-                  <img src={c.image} alt={c.client} className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${c.imageFit === "cover" ? "object-cover" : "object-contain p-10"}`} />
+                <div className={`relative grid place-items-center overflow-hidden bg-ink-foreground ${i < 2 ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                  <img src={c.image} alt={c.client} className={`transition-transform duration-700 group-hover:scale-105 ${c.imageFit === "cover" ? "h-full w-full object-cover" : "h-auto w-auto max-h-[70%] max-w-[84%] object-contain"}`} />
                 </div>
                 <div className="flex flex-1 items-start justify-between gap-4 p-6">
                   <div>
