@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Diagnóstico sem compromisso — Contato | Catena Consultoria" },
-      { name: "description", content: "Solicite um diagnóstico gratuito e sem compromisso com a Catena Consultoria. Tel. (22) 99873-0354 · contato@catenaufrj.com." },
+      { name: "description", content: "Solicite um diagnóstico gratuito e sem compromisso com a Catena Consultoria. Tel. (22) 99762-4691 · contato@catenaufrj.com." },
       { property: "og:title", content: "Solicite um diagnóstico sem compromisso — Catena Consultoria" },
       { property: "og:description", content: "Fale com a Empresa Júnior das Engenharias da UFRJ — Campus Macaé." },
     ],
