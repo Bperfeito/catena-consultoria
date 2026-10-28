@@ -7,7 +7,7 @@ const nav = [
   { to: "/quem-somos", label: "Quem somos" },
   { to: "/servicos", label: "Serviços" },
   { to: "/cases", label: "Cases" },
-  { to: "/movimento-empresa-junior", label: "Movimento Empresa Júnior" },
+  { to: "/movimento-empresa-junior", label: "Empresa Júnior" },
   { to: "/conteudo", label: "Blog & E-books" },
   { to: "/contato", label: "Contato" },
 ] as const;
@@ -32,12 +32,12 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3 text-ink-foreground" onClick={() => setOpen(false)}>
           <img src={images.logo} alt="Catena Consultoria" className="h-16 w-auto" />
         </Link>
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm text-ink-muted transition-colors hover:text-ink-foreground"
+              className="whitespace-nowrap text-sm text-ink-muted transition-colors hover:text-ink-foreground"
               activeProps={{ className: "text-sm text-ink-foreground" }}
             >
               {n.label}
