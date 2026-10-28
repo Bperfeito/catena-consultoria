@@ -26,7 +26,7 @@ function About() {
 
       <section className="mx-auto grid max-w-7xl gap-16 px-6 py-28 lg:grid-cols-2 lg:px-10">
         <img src={images.equipe} alt="Equipe da Catena Consultoria com a bandeira da empresa" className="w-full rounded-lg object-cover" />
-        <div>
+        <div className="pr-14">
           <SectionLabel index="01">Sobre nós</SectionLabel>
           <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
