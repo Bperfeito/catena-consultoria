@@ -32,7 +32,7 @@ function Home() {
             <p className="max-w-md text-ink-muted">
               Empresa Júnior das Engenharias da UFRJ — Campus Macaé, com soluções em Produção, Civil e Mecânica.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 md:pr-24">
               <Link to="/contato" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5">
                 Marque uma avaliação gratuita <ArrowUpRight className="h-4 w-4" />
               </Link>

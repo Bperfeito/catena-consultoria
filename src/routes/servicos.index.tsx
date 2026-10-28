@@ -25,7 +25,7 @@ function Services() {
             <div className="overflow-hidden rounded-lg">
               <img src={a.image} alt="" className="aspect-[4/3] w-full object-cover" />
             </div>
-            <div>
+            <div className="pr-14">
               <p className="eyebrow text-primary">{a.index} — {a.discipline}</p>
               <h2 className="mt-5 text-4xl md:text-5xl">{a.title}</h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{a.intro}</p>

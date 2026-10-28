@@ -38,7 +38,7 @@ export const contact = {
   whatsapp: "https://wa.me/5522997624691",
   email: "contato@catenaufrj.com",
   address: ["Av. Aloísio da Silva Gomes, 50, Novo Cavaleiros", "UFRJ — Campus Macaé", "Macaé — RJ", "CEP 27930-560"],
-  instagram: "https://www.instagram.com/catenaconsultoriaufrj/",
+  instagram: "https://www.instagram.com/catena_consultoria/",
   linkedin: "https://br.linkedin.com/company/catenaconsultoria",
   facebook: "https://www.facebook.com/catenaconsultoria",
 };
@@ -100,10 +100,13 @@ export const areas: Area[] = [
     title: "Soluções para o seu sistema mecânico",
     image: engenheiro.url,
     intro:
-      "Consultoria em engenharia mecânica desenvolvida por estudantes da UFRJ — Campus Macaé, com a orientação de professores com estudos e experiência na área.",
-    services: [],
-    pending:
-      "A lista detalhada de serviços de Engenharia Mecânica não estava disponível no site original e está pendente de confirmação pela equipe Catena.",
+      "Soluções especializadas para atender às suas necessidades. Nossa equipe equipada está pronta para te proporcionar uma experiência confiável e eficiente, garantindo o funcionamento seguro e otimizado. Conte conosco para um atendimento dedicado e soluções personalizadas que mantenham os sistemas mecânicos operando no seu melhor desempenho.",
+    services: [
+      { name: "Modelagem 2D e 3D", description: "Transforma conceitos em representações bidimensionais e tridimensionais realistas, facilitando a visualização e análise detalhada de objetos e ambientes." },
+      { name: "Ensaios Mecânicos", description: "Realiza testes rigorosos para avaliar a resistência, durabilidade e desempenho de materiais e estruturas, garantindo a conformidade com padrões de qualidade e segurança." },
+      { name: "Projeto de Climatização", description: "Desenvolve sistemas eficientes para controlar a temperatura, umidade e qualidade do ar em ambientes internos, visando o conforto e a saúde das pessoas." },
+      { name: "Projeto de Exaustão", description: "Planeja sistemas de exaustão para remover poluentes do ar, fumaça ou vapores indesejados em espaços fechados, promovendo um ambiente seguro e saudável." },
+    ],
   },
 ];
 
@@ -143,4 +146,31 @@ export const networks = [
   { name: "Brasil Júnior", logo: brasilJr.url },
   { name: "Rio Júnior", logo: rioJr.url },
   { name: "Núcleo Norte Fluminense", logo: nucleo.url },
+];
+
+export const mej = {
+  definition:
+    "As Empresas Juniores (EJs) são organizações formadas por estudantes de graduação que buscam aplicar os conhecimentos adquiridos em sala de aula na prática, desenvolvendo projetos e serviços para empresas e organizações reais. Essas empresas são gerenciadas pelos próprios estudantes, sob orientação de professores e profissionais do mercado.",
+  representation:
+    "No Brasil, as empresas juniores são representadas pela Confederação Brasileira de Empresas Juniores — a Brasil Júnior —, presente no estado do Rio de Janeiro através da Rio Júnior, a Federação das Empresas Juniores do Estado do Rio de Janeiro.",
+  purpose:
+    "Gerenciadas pelos próprios estudantes e acompanhadas por professores e profissionais do mercado, as empresas juniores funcionam como um espaço de aprendizagem prática: o estudante vive a rotina de uma empresa real antes de se formar, e a organização recebe um atendimento dedicado, com preço baixo e qualidade.",
+};
+
+export const pillars = [
+  {
+    title: "Missão",
+    description:
+      "Desenvolver e implementar estratégias que fortaleçam a imagem e reputação da Catena, que atraiam e fidelizem clientes impulsionando o crescimento e a rentabilidade da empresa. Proporcionando assim, uma vivência prática e enriquecedora para os membros por meio de contato com clientes, parceiros e mercado.",
+  },
+  {
+    title: "Visão",
+    description:
+      "Aumentar a visibilidade e o reconhecimento da empresa na região, estimulando a satisfação e o engajamento dos leads.",
+  },
+  {
+    title: "Valores",
+    description:
+      "Criatividade, inovação, responsabilidade social, comprometimento e persistência.",
+  },
 ];
