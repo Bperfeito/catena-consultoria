@@ -10,7 +10,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 const float =
-  "grid h-14 w-14 place-items-center rounded-full shadow-lg ring-1 ring-black/10 transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
+  "grid h-12 w-12 place-items-center rounded-full shadow-lg ring-1 ring-black/10 transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring";
 
 export function FloatingContacts() {
   const whatsapp = `${contact.whatsapp}?text=${encodeURIComponent(
@@ -18,7 +18,7 @@ export function FloatingContacts() {
   )}`;
 
   return (
-    <div className="fixed bottom-6 right-5 z-40 flex flex-col items-center gap-3 lg:bottom-8 lg:right-8">
+    <div className="fixed bottom-5 right-4 z-40 flex flex-col items-center gap-2.5 lg:bottom-6 lg:right-6">
       <a
         href={whatsapp}
         target="_blank"
@@ -27,7 +27,7 @@ export function FloatingContacts() {
         title="Falar no WhatsApp"
         className={`${float} bg-primary text-primary-foreground`}
       >
-        <WhatsAppIcon className="h-7 w-7" />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
       <a
         href={contact.instagram}
@@ -37,7 +37,7 @@ export function FloatingContacts() {
         title="Seguir no Instagram"
         className={`${float} bg-ink text-ink-foreground`}
       >
-        <Instagram className="h-6 w-6" />
+        <Instagram className="h-5 w-5" />
       </a>
     </div>
   );
