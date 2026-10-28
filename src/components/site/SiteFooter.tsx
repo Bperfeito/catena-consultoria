@@ -29,6 +29,7 @@ export function SiteFooter() {
             <li><Link to="/quem-somos" className="hover:text-accent">Quem somos</Link></li>
             <li><Link to="/servicos" className="hover:text-accent">Serviços</Link></li>
             <li><Link to="/cases" className="hover:text-accent">Cases de sucesso</Link></li>
+            <li><Link to="/movimento-empresa-junior" className="hover:text-accent">Movimento Empresa Júnior</Link></li>
             <li><Link to="/conteudo" className="hover:text-accent">Blog & E-books</Link></li>
             <li><Link to="/contato" className="hover:text-accent">Diagnóstico gratuito</Link></li>
           </ul>
