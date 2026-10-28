@@ -28,7 +28,7 @@ function Cases() {
           {cases.map((c, i) => (
             <article id={c.slug} key={c.slug} className="grid scroll-mt-28 items-center gap-10 py-14 md:grid-cols-[5rem_1fr_1.1fr]">
               <span className="font-display text-5xl text-primary">{String(i + 1).padStart(2, "0")}</span>
-              <div>
+              <div className="pr-14">
                 <p className="eyebrow text-muted-foreground">{c.area}</p>
                 <h2 className="mt-3 text-4xl leading-tight">{c.title}</h2>
                 <p className="mt-3 text-lg text-muted-foreground">{c.client}</p>
