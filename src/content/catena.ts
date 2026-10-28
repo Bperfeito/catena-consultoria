@@ -33,9 +33,9 @@ export const images = {
 };
 
 export const contact = {
-  phone: "(22) 99873-0354",
-  phoneHref: "tel:+5522998730354",
-  whatsapp: "https://wa.me/5522998730354",
+  phone: "(22) 99762-4691",
+  phoneHref: "tel:+5522997624691",
+  whatsapp: "https://wa.me/5522997624691",
   email: "contato@catenaufrj.com",
   address: ["Av. Aloísio da Silva Gomes, 50, Novo Cavaleiros", "UFRJ — Campus Macaé", "Macaé — RJ", "CEP 27930-560"],
   instagram: "https://www.instagram.com/catenaconsultoriaufrj/",
