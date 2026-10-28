@@ -33,7 +33,7 @@ function MejPage() {
             Estudantes que <em>gerenciam</em> uma empresa real.
           </h2>
         </div>
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 lg:pr-14">
           <p className="text-lg leading-relaxed text-muted-foreground">{mej.definition}</p>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{mej.purpose}</p>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{mej.representation}</p>

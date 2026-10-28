@@ -78,7 +78,7 @@ function Contact() {
           </div>
         </div>
 
-        <aside className="space-y-10 lg:col-span-4 lg:col-start-9">
+        <aside className="space-y-10 pr-14 lg:col-span-4 lg:col-start-9">
           <div>
             <p className="eyebrow flex items-center gap-2 text-primary"><Phone className="h-4 w-4" /> Contate-nos</p>
             <a href={contact.phoneHref} className="mt-3 block font-display text-3xl">{contact.phone}</a>
