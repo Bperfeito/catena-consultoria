@@ -75,7 +75,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: var(--font-sans); font-weight: 800; letter-spacing: -0.035em; }
+  h1, h2, h3 { font-family: "Archivo Black", var(--font-sans); font-weight: 400; letter-spacing: -0.035em; }
 }
 
 @utility eyebrow {
